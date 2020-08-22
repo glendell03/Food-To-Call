@@ -1,13 +1,20 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+import Home from "./components/pages/Home";
+import Navbar from "./components/layout/Navbar";
+import Login from "./components/auth/Login";
+import Register from "./components/auth/Register";
+
 function App() {
   return (
     <Router>
-      <div className="App">Wassup</div>
+      <Navbar />
 
       <Switch>
-        <Route />
+        <Route exact path="/" component={Home} />
+        <Route path="/login" component={Login} />
+        <Route path="/register" component={Register} />
       </Switch>
     </Router>
   );
