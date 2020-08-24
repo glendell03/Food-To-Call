@@ -4,7 +4,6 @@ const auth = require("../middleware/auth");
 
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const { on } = require("../models/user.model");
 
 router.post("/register", async (req, res) => {
   try {
@@ -110,6 +109,17 @@ router.post("/isValid", async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
+});
+
+router.get("/me", auth, async (req, res) => {
+  const user = await User.findById(req.user);
+
+  const { username, email, _id } = user;
+  res.json({
+    username,
+    email,
+    _id,
+  });
 });
 
 module.exports = router;

@@ -1,0 +1,25 @@
+.custom-button {
+  width: auto;
+  height: 30px;
+  letter-spacing: 2px;
+  padding: 0 15px;
+  font-size: 14px;
+  background-color: #ffdb1d;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bolder;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.4s ease all;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background-color: #ecc70b;
+    color: white;
+    border: none;
+  }
+}

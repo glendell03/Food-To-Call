@@ -1,0 +1,39 @@
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  z-index: 1000;
+
+  .nav-links {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    & a {
+      color: white;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+  }
+
+  .logo-container {
+    .logo {
+      height: 80px;
+      width: 80px;
+    }
+  }
+
+  .left-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 11rem;
+    width: auto;
+
+    .search-icon,
+    .store-icon {
+      color: white;
+      font-size: 25px;
+    }
+  }
+}
